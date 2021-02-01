@@ -16,8 +16,9 @@
     "arguments": {
         "execute": {
            "inArguments":[
-				{
-                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
+				{                    
+                    "emailAddress": "{{InteractionDefaults.Email}}"
+                    
                 }									
 			],
           "outArguments": [],
