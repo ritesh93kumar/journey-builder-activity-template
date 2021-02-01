@@ -22,7 +22,7 @@
                 }									
 			],
           "outArguments": [],
-          "url": "https://mktcld-jb-custom-activity.herokuapp.com/journeybuilder/execute",
+          "url": "https://enrux4yl2qt8.x.pipedream.net",
            "verb": "POST",
             "body": "",
             "header": "",
