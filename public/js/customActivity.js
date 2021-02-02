@@ -72,15 +72,16 @@ define([
     function save() {
         var textContent = $('#textareaTest').val();
 
-        payload['arguments'].execute.inArguments = [{
+        /* payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "content": textContent,
             "email": "{{InteractionDefaults.Email}}"
-        }];
+        }]; */
         //"emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
-        payload['metaData'].isConfigured = true;
+        //payload['metaData'].isConfigured = true;
+        //console.log(payload);
 
-        console.log(payload);
+        console.log(textContent);
         //connection.trigger('updateActivity', payload);
         connection.trigger('updateActivity', textContent);
     }
