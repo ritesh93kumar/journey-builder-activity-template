@@ -34,7 +34,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "45f8e484-67ca-4f55-836a-d94fe740d0eb",
       "save": {
-        "url": "https://mktcld-jb-custom-activity.herokuapp.com/journeybuilder/save",
+        "url": "https://enm74te586cl465.m.pipedream.net",
           "verb": "POST",
         "useJwt": true
        },
