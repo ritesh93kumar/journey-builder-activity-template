@@ -70,8 +70,8 @@ define([
     }
 
     function save() {
-        var textContent = $('#textareaTest').val();
-
+        var textContent = JSON.parse($('#textareaTest').val());
+        textContent['metaData'].isConfigured = true;
         /* payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "content": textContent,
