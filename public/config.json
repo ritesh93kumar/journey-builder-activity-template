@@ -31,6 +31,10 @@
         "url": "https://1fec3c2dc2202ce9477d3af286238146.m.pipedream.net",
           "verb": "POST"
        },
+       "TestSave": {
+        "url": "https://1fec3c2dc2202ce9477d3af286238146.m.pipedream.net",
+          "verb": "POST"
+       },
        "publish": {
         "url": "https://mktcld-jb-custom-activity.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
