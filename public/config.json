@@ -17,7 +17,7 @@
         "execute": {
            "inArguments":[
 				{                    
-                    "emailAddress": "{{InteractionDefaults.Email}}"
+                    "emailAddress": "ritesh.kumar@brillio.com"
                     
                 }									
 			],

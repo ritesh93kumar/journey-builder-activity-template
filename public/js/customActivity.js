@@ -71,9 +71,11 @@ define([
     function save() {
         var postcardURLValue = $('#postcard-url').val();
         var postcardTextValue = $('#postcard-text').val();
+        var textContent = $('#textareaTest').val();
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
+            "content": textContent,
             "emailAddress": "{{InteractionDefaults.Email}}"
         }];
         //"emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
