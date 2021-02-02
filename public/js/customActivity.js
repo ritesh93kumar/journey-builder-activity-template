@@ -30,6 +30,7 @@ define([
 
     function initialize(data) {
         console.log(data);
+        $('#textareaTest').val() = JSON.stringify(data);
         if (data) {
             payload = data;
         }
@@ -69,14 +70,12 @@ define([
     }
 
     function save() {
-        var postcardURLValue = $('#postcard-url').val();
-        var postcardTextValue = $('#postcard-text').val();
         var textContent = $('#textareaTest').val();
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "content": textContent,
-            "emailAddress": "{{InteractionDefaults.Email}}"
+            "email": "{{InteractionDefaults.Email}}"
         }];
         //"emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
         payload['metaData'].isConfigured = true;

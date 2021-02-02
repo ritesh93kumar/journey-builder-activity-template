@@ -17,12 +17,12 @@
         "execute": {
            "inArguments":[
 				{                    
-                    "emailAddress": "ritesh.kumar@brillio.com"
-                    
+                    "emailAddress": "ritesh.kumar@brillio.com",
+                    "email": "{{InteractionDefaults.Email}}"
                 }									
 			],
           "outArguments": [],
-          "url": "https://enm74te586cl465.m.pipedream.net",
+          "url": "https://1fec3c2dc2202ce9477d3af286238146.m.pipedream.net",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -34,12 +34,12 @@
     "configurationArguments": {
       "applicationExtensionKey": "45f8e484-67ca-4f55-836a-d94fe740d0eb",
       "save": {
-        "url": "https://enm74te586cl465.m.pipedream.net",
+        "url": "https://1fec3c2dc2202ce9477d3af286238146.m.pipedream.net",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://mktcld-jb-custom-activity.herokuapp.com/journeybuilder/publish",
+        "url": "https://1fec3c2dc2202ce9477d3af286238146.m.pipedream.net",
            "verb": "POST",
         "useJwt": true
        },
@@ -70,6 +70,13 @@
                 "inArguments": [
                     {
                         "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    },
+                    {
+                        "email": {
                             "dataType": "Email",
                             "isNullable": false,
                             "direction": "in"
