@@ -22,21 +22,14 @@
                 }									
 			],
           "outArguments": [],
-          "url": "https://1fec3c2dc2202ce9477d3af286238146.m.pipedream.net",
-           "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": true,
-            "timeout": 10000
+          "url": "https://1fec3c2dc2202ce9477d3af286238146.m.pipedream.net"
         }
     },
     "configurationArguments": {
       "applicationExtensionKey": "45f8e484-67ca-4f55-836a-d94fe740d0eb",
       "save": {
         "url": "https://1fec3c2dc2202ce9477d3af286238146.m.pipedream.net",
-          "verb": "POST",
-        "useJwt": true
+          "verb": "POST"
        },
        "publish": {
         "url": "https://mktcld-jb-custom-activity.herokuapp.com/journeybuilder/publish",
