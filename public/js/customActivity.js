@@ -30,7 +30,7 @@ define([
 
     function initialize(data) {
         console.log(data);
-        $('#textareaTest').val() = JSON.stringify(data);
+        $('#textareaTest').val(JSON.stringify(data));
         if (data) {
             payload = data;
         }
