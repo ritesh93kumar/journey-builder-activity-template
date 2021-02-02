@@ -22,7 +22,7 @@
                 }									
 			],
           "outArguments": [],
-          "url": "https://enrux4yl2qt8.x.pipedream.net",
+          "url": "https://enm74te586cl465.m.pipedream.net",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -67,7 +67,14 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [],
+                "inArguments": [
+                    {
+                        "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }],
                 "outArguments": []
             }
         }
