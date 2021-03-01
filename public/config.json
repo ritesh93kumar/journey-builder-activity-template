@@ -1,8 +1,8 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-        "icon": "images/icon.png",
-        "iconSmall": "images/iconSmall.png",
+        "icon": "images/api_icon.png",
+        "iconSmall": "images/api_icon.png",
         "category": "message"
     },
     "type": "REST",
@@ -18,11 +18,12 @@
            "inArguments":[
 				{                    
                     "emailAddress": "ritesh.kumar@brillio.com",
-                    "email": "{{InteractionDefaults.Email}}"
+                    "email": "{{InteractionDefaults.Email}}",
+                    "CIS": ""
                 }									
 			],
           "outArguments": [],
-          "url": "https://1fec3c2dc2202ce9477d3af286238146.m.pipedream.net"
+          "url": "https://mktcld-jb-custom-activity.herokuapp.com/journeybuilder/execute"
         }
     },
     "configurationArguments": {
