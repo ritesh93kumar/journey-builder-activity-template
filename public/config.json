@@ -2,7 +2,7 @@
     "workflowApiVersion": "1.1",
     "metaData": {
         "icon": "images/api_icon.png",
-        "iconSmall": "images/api_icon.png",
+        "iconSmall": "images/api_iconSmall.png",
         "category": "message"
     },
     "type": "REST",
@@ -17,19 +17,24 @@
         "execute": {
            "inArguments":[
 				{                    
-                    "emailAddress": "ritesh.kumar@brillio.com",
-                    "email": "{{InteractionDefaults.Email}}",
-                    "CIS": ""
+                    "emailAddress": "{{Contact.Attribute.Test_Contact.Email}}"
+                },
+                {    
+                    "CIS": "{{Contact.Attribute.Test_Contact.CIS}}"
                 }									
 			],
-          "outArguments": [],
+          "outArguments": [
+                {
+                    "returnedData":""
+                }
+            ],
           "url": "https://mktcld-jb-custom-activity.herokuapp.com/journeybuilder/execute"
         }
     },
     "configurationArguments": {
       "applicationExtensionKey": "45f8e484-67ca-4f55-836a-d94fe740d0eb",
       "save": {
-        "url": "https://1fec3c2dc2202ce9477d3af286238146.m.pipedream.net",
+        "url": "https://mktcld-jb-custom-activity.herokuapp.com/journeybuilder/save",
           "verb": "POST"
        },
        "TestSave": {
@@ -74,13 +79,21 @@
                         }
                     },
                     {
-                        "email": {
-                            "dataType": "Email",
+                        "CIS": {
+                            "dataType": "Text",
                             "isNullable": false,
                             "direction": "in"
                         }
                     }],
-                "outArguments": []
+                "outArguments": [
+                    {
+                        "returnedData": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    },
+                ]
             }
         }
     }

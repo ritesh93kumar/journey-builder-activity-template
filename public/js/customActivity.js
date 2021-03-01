@@ -30,7 +30,7 @@ define([
 
     function initialize(data) {
         console.log(data);
-        $('#textareaTest').val(JSON.stringify(data));
+        $('#cisnumber').val(JSON.stringify(data));
         if (data) {
             payload = data;
         }
@@ -48,8 +48,9 @@ define([
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
-                
-              
+                if (key === 'CIS') {
+                    $('#cisnumber').val(JSON.stringify(val));
+                }              
             });
         });
 
@@ -70,8 +71,8 @@ define([
     }
 
     function save() {
-        var textContent = JSON.parse($('#textareaTest').val());
-        textContent['metaData'].isConfigured = true;
+        //var textContent = JSON.parse($('#textareaTest').val());
+        //textContent['metaData'].isConfigured = true;
         /* payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "content": textContent,
@@ -81,9 +82,11 @@ define([
         //payload['metaData'].isConfigured = true;
         //console.log(payload);
 
+        payload['metaData'].isConfigured = true;
+
         console.log(textContent);
-        //connection.trigger('updateActivity', payload);
-        connection.trigger('updateActivity', textContent);
+        connection.trigger('updateActivity', payload);
+        //connection.trigger('updateActivity', textContent);
     }
 
 
