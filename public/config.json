@@ -80,7 +80,8 @@
                             "isNullable": false,
                             "direction": "in"
                         }
-                    }],
+                    }
+                ],
                 "outArguments": [
                     {
                         "returnedData": {
@@ -88,7 +89,7 @@
                             "direction": "out",
                             "access": "visible"
                         }
-                    },
+                    }
                 ]
             }
         }
