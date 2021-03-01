@@ -73,11 +73,9 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    console.log(req.body);
     logData(req.body);
-    console.error(req.body);
     // example on how to decode JWT
-    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+    /* JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
         // verification error -> unauthorized request
         if (err) {
@@ -96,7 +94,9 @@ exports.execute = function (req, res) {
             console.error('inArguments invalid.');
             return res.status(400).end();
         }
-    });
+    }); */
+
+    res.json({ returnedData: 'back from api' });
 };
 
 
