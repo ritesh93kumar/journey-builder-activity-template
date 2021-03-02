@@ -111,9 +111,12 @@ exports.execute = function (req, res) {
         response.on('data', function (chunk) {
             console.error('BODY: ' + chunk);
             responseBody = chunk;
+            responseFromAPI = 'Response from API => ' + responseBody;
+            res.json(responseFromAPI);
         });
-        responseFromAPI = 'Response from API => ' + responseBody;
-        res.json(responseFromAPI);
+        response.on("error", function (error) {
+            console.error(error);
+        });
     }).end();
 
     //console.error('Response from API => ' + responseFromAPI);
