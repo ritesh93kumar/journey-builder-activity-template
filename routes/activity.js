@@ -95,7 +95,7 @@ exports.execute = function (req, res) {
             return res.status(400).end();
         }
     }); */
-
+    var responseFromAPI = 'No response from API';
     var options = {
         'method': 'POST',
         'hostname': 'enbgjsph6k0cvrj.m.pipedream.net',
@@ -112,11 +112,11 @@ exports.execute = function (req, res) {
             
         });
         if(res.statusCode == 200){
-            res.json({ returnedData: 'Response from API' });
+            responseFromAPI = 'Response from API => ' + chunk;
         }
     }).end();
 
-    res.json({ returnedData: 'No response from API' });
+    res.json(responseFromAPI);
 };
 
 
