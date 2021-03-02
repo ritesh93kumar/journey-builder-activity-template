@@ -103,20 +103,21 @@ exports.execute = function (req, res) {
         'headers': {},
         'maxRedirects': 20
     };
-    https.request(options, function(res) {
-        console.error('STATUS: ' + res.statusCode);
+    https.request(options, function(response) {
+        console.error('STATUS: ' + response.statusCode);
         //console.log('HEADERS: ' + JSON.stringify(res.headers));
         //res.setEncoding('utf8');
         var responseBody;
-        res.on('data', function (chunk) {
+        response.on('data', function (chunk) {
             console.error('BODY: ' + chunk);
             responseBody = chunk;
         });
         responseFromAPI = 'Response from API => ' + responseBody;
+        res.json(responseFromAPI);
     }).end();
 
-    console.error('Response from API => ' + responseBody);
-    res.json(responseFromAPI);
+    //console.error('Response from API => ' + responseFromAPI);
+    //res.json(responseFromAPI);
 };
 
 
