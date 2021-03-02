@@ -115,6 +115,7 @@ exports.execute = function (req, res) {
         responseFromAPI = 'Response from API => ' + responseBody;
     }).end();
 
+    console.error('Response from API => ' + responseBody);
     res.json(responseFromAPI);
 };
 
