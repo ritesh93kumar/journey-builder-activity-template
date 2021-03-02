@@ -107,12 +107,13 @@ exports.execute = function (req, res) {
         logData('STATUS: ' + res.statusCode);
         //console.log('HEADERS: ' + JSON.stringify(res.headers));
         //res.setEncoding('utf8');
+        var responseBody;
         res.on('data', function (chunk) {
             console.error('BODY: ' + chunk);
-            
+            responseBody = chunk;
         });
         if(res.statusCode == 200){
-            responseFromAPI = 'Response from API => ' + chunk;
+            responseFromAPI = 'Response from API => ' + responseBody;
         }
     }).end();
 
