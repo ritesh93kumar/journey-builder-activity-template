@@ -104,7 +104,7 @@ exports.execute = function (req, res) {
         'maxRedirects': 20
     };
     https.request(options, function(res) {
-        logData('STATUS: ' + res.statusCode);
+        console.error('STATUS: ' + res.statusCode);
         //console.log('HEADERS: ' + JSON.stringify(res.headers));
         //res.setEncoding('utf8');
         var responseBody;
@@ -112,9 +112,7 @@ exports.execute = function (req, res) {
             console.error('BODY: ' + chunk);
             responseBody = chunk;
         });
-        if(res.statusCode == 200){
-            responseFromAPI = 'Response from API => ' + responseBody;
-        }
+        responseFromAPI = 'Response from API => ' + responseBody;
     }).end();
 
     res.json(responseFromAPI);
