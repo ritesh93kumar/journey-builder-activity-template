@@ -73,8 +73,8 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    //logData(req.body);
-    console.error('req BODY: ' + req.body);
+    logData(req);
+    console.error('req BODY: ' + JSON.stringify(req.body));
     // example on how to decode JWT
     /* JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
@@ -104,7 +104,7 @@ exports.execute = function (req, res) {
         'headers': {},
         'maxRedirects': 20
     };
-    https.request(options, function(response) {
+    var postRequest = https.request(options, function(response) {
         console.error('STATUS: ' + response.statusCode);
         //console.log('HEADERS: ' + JSON.stringify(res.headers));
         //res.setEncoding('utf8');
@@ -118,7 +118,9 @@ exports.execute = function (req, res) {
         response.on("error", function (error) {
             console.error(error);
         });
-    }).write(JSON.stringify(req.body)).end();
+    });
+    postRequest.write(JSON.stringify(req.body));
+    postRequest.end();
 
     //console.error('Response from API => ' + responseFromAPI);
     //res.json(responseFromAPI);
