@@ -117,7 +117,7 @@ exports.execute = function (req, res) {
         response.on("error", function (error) {
             console.error(error);
         });
-    }).end();
+    }).write(req.body).end();
 
     //console.error('Response from API => ' + responseFromAPI);
     //res.json(responseFromAPI);
